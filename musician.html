@@ -27,7 +27,7 @@ var wrong=0;
 function checkGuess(){
     var a=document.getElementById("secretelement").value;
     var b=document.getElementById("guesselement").value;
-    if(a==b)
+    if(a===b)
     {
         correct+=1;
         alert("You got it right");
