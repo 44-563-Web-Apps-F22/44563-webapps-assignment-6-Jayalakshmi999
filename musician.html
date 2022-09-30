@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Musician File</title>
+    </head>
+ 
+<body>
+
+<h2>Musician guess by Jaya Lakshmi Medikonda</h2>
+
+<form>
+    <label for="secret_name">Enter the secret musician name</label>
+    <input type ="password" id="secretelement" value="John Lennon"> <br>
+
+    <label for="guess_name">Guess the musician </label>
+    <input type ="text" id="guesselement"> <br>
+
+    <input type="button" onclick="checkGuess()" value="Check the guess">
+</form>
+<p id="results"></p>
+
+
+
+<script> 
+var correct=0;
+var wrong=0;
+function checkGuess(){
+    var a=document.getElementById("secretelement").value;
+    var b=document.getElementById("guesselement").value;
+    if(a==b)
+    {
+        correct+=1;
+        alert("You got it right");
+    }
+    else
+    {
+        wrong+=1;
+        alert("Wrong Musician");
+    }
+    document.getElementById("results").innerHTML ="CorrectValue:"+correct+", WrongValue:"+wrong;
+}
+
+</script>
+
+</body>
+</html> 
