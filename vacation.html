@@ -50,9 +50,9 @@ function selectVacation (){
 function updateVacation(){
     let city=document.getElementById("form1_city").value;
     let price=document.getElementById("form1_price").value;
-    my_vacation["City"]=city;
-    my_vacation["Price"]=price;
-    document.getElementById("result").innerHTML=JSON.stringify(my_vacation)
+    my_vacation["city"]=city;
+    my_vacation["price"]=price;
+    document.getElementById("result").innerHTML="The Data is"+JSON.stringify(my_vacation)
 }
 </script>
 
