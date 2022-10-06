@@ -35,17 +35,18 @@
 
 
 
-<p id="result"></p>
+<p id="result">This text will be replaced</p>
 
 <script> 
 let my_vacation={}
 function selectVacation (){
+    my_vacation={}
     let travel=document.getElementById("form1_travel").checked;
     let domestics=document.getElementById("form1_domestic").checked;
     let resorts=document.getElementById("form1_resort").checked;
-    my_vacation={"air":travel,"domestic":domestics,"resort":resorts};
+    my_vacation={"air":travel,"domestic":domestics,"resort":resorts}
     console.log(my_vacation)
-    document.getElementById("result").innerHTML=JSON.stringify(my_vacation);
+    document.getElementById("result").innerHTML="The Data is "+JSON.stringify(my_vacation);
 }
 function updateVacation(){
     let city=document.getElementById("form1_city").value;

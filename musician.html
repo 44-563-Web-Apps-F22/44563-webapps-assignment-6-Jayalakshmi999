@@ -19,7 +19,7 @@
     <label for="guess_name">Guess the musician </label>
     <input type ="text" id="guesselement"> <br>
 
-    <input type="button" onclick="checkGuess()" value="Check the guess">
+    <input type="button" onclick="checkGuess()" id="buton" value="Check the guess">
 </form>
 <p id="results">This text will be replaced</p>
 <div class="container" id="images" onclick="swapImage()">
@@ -32,6 +32,8 @@
     var wrong=0;
     count=0;
     function checkGuess(){
+        if(count<3)
+        {
         var a=document.getElementById("secretelement").value;
         var b=document.getElementById("guesselement").value;
         if(a===b)
@@ -46,7 +48,14 @@
             count++;
             alert("Wrong Musician");
         }
+    }
+    else
+    {
+        gameOver();
+    }
         document.getElementById("results").innerHTML ="CorrectValue:"+correct+", WrongValue:"+wrong;
+        
+        
     
     }
     let useImage=1;
@@ -74,8 +83,14 @@
                 break;
     
         }
-    
+
+        
     }
+    function gameOver()
+        {
+            alert("Sorry, game over");
+        }
+    
 
 </script>
 
